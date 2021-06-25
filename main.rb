@@ -10,6 +10,7 @@ def card_commands(option)
     exit
   when "-cards-set"
     fetch_cards
+    parse_json
   when "-cards-set-rarity"
     @options[:syntax_highlighting] = true
   when "-cards-ktk"
