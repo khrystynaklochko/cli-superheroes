@@ -1,3 +1,5 @@
+I am using yajl-ruby for parsing Json file, since I don't want to create instance objects and serialization and can query directly on a parsed set of objects. I decided not to create instance objects because the list of attributes for each card was not give, hence not important.
+
 CLI tool which provide you following commands:
 -cards-set A list of Cards grouped by set.
 -cards-set-rarity A list of Cards grouped by set and within each set grouped by rarity.

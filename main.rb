@@ -1,5 +1,7 @@
 require_relative "http_connector"
+require_relative "json_parser"
 
+@parser = JsonParser.new()
 def card_commands(option)
   case option
   when "-h"
@@ -10,11 +12,13 @@ def card_commands(option)
     exit
   when "-cards-set"
     fetch_cards
-    parse_json
+    @parser.parse_by_set
   when "-cards-set-rarity"
-    @options[:syntax_highlighting] = true
+    fetch_cards
+    @parser.parse_by_set_rarity
   when "-cards-ktk"
-    @options[:syntax_highlighting] = true
+    fetch_cards
+    @parser.parse_by_ktk
   end
 end
 

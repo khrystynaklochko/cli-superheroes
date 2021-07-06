@@ -17,14 +17,3 @@ def fetch_cards
     end
   end
 end
-
-def parse_json
-  io = File.open("cards.json")
-  count = 10
-  Yajl::Parser.parse(io) do |obj|
-   puts "Parsed: #{obj}"
-    count -= 1
-    break if count == 0
-  end
-  io.close
-end
