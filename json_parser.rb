@@ -1,3 +1,5 @@
+require 'yajl'
+
 class JsonParser
 
   attr_accessor :parser_by_set, :parser_by_set_rarity, :parser_ktk, :cards_by_set, :cards_by_set_rarity, :cards_by_ktk
